@@ -43,6 +43,7 @@ Content of shop is:
 Content of product is:
 
     Header: main image, description, data
+    Contet: Created with CKeditor5
     Reviews
 
 Static pages can be created from django admin panel
