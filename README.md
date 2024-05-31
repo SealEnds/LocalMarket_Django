@@ -48,7 +48,7 @@ Content of product is:
 
 4. Admin: superuser
 
-Add a user to the group 'owner' so that it is allowed to create shops and products. Users and Groups use to default Django models.
+Add a user to the group 'owner' so that it is allowed to create shops and products. Users and Groups use default Django models.
 
 Static pages can be created from django admin panel
 
