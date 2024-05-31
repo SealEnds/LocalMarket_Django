@@ -1,0 +1,51 @@
+{% extends 'layouts/layout.html' %}
+{% load static %}
+{% block title %} {{tienda.name}} {% endblock %}
+{% block content %}
+{% load filters %}
+
+{% if is_owner %}
+
+    <p class="volver"><a href="{% url 'tienda' tienda.id %}">Volver</a></p>
+
+    <h2><a class="text-decoration" href="{% url 'createProducto' tienda.id %}">Añadir Productos a Tu Tienda</a></h2>
+    <hr>
+    <form method="post" action="{% url 'importCSV' tienda.id %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h2><label for="fileSelect">Añadir Productos Con CSV</label></h2>
+        <input id="fileSelect" name="csv_file" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
+        <div class="flex-end">
+            <input type="submit" value="Importar Productos"/>
+        </div>
+    </form>
+    
+    <hr>
+    <h2>Editar Tienda</h2>
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {{tiendaForm.errors}}
+    <div class="form-container">
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in tiendaForm %}
+            <div class="form-group">
+                <label>{{ field.label_tag }}</label>
+                {{ field |safe}}
+                <div class="text-danger">{{ field.errors }}</div>  <!-- Display field-specific errors -->
+            </div>
+            {% endfor %}
+            <div class="form-submit">
+                <input type="submit" value="Actualizar Tienda"/>
+            </div>
+        </form>
+    <div class="form-container">
+{% else %}
+    <h2>Acceso No Autorizado</h2>
+{% endif %}
+{% endblock %}

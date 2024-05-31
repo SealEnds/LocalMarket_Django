@@ -1,0 +1,13 @@
+ref;name;description;price;visible;in_stock
+11100;Producto Uno;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;10;true;true
+2220;Producto Dos;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;20;true;false
+3330;Producto Tres;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;30;true;true
+4440;Producto Cuatro;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;400;true;true
+5550;Producto Cinco;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;500;true;false
+6660;Producto Seis;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;600;true;true
+7770;Producto Siete;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;100;true;true
+8880;Producto Ocho;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;200;true;false
+9990;Producto Nueve;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;300;true;true
+10100;Producto Diez;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;400;true;true
+20200;Producto Once;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;500;true;false
+30300;Producto Doce;Descubre [Nombre del Producto], creado para ofrecerte calidad y rendimiento excepcionales.;600;true;true

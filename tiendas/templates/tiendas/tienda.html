@@ -1,0 +1,54 @@
+{% extends 'layouts/layout.html' %}
+{% block title %} {{tienda.name}} {% endblock %}
+{% block content %}
+{% if is_owner %}
+    <div class="edit-article-detail">
+        <a href="{% url 'editTienda' tienda.id %}">Editar</a>
+    </div>
+{% endif %}
+{% comment %} {% if tienda.user == request.user.pk %}
+    <h2><a href="{% url 'createProducto' tienda.id %}">Crear Productos para Tu Tienda</a></h2>
+    <h2>Añadir Productos Con CSV</h2>
+{% endif %} {% endcomment %}
+<section>
+    {% if tienda.image != 'null' and tienda.image|length >= 1 %}
+    <div class="image2">
+        <img src="{{tienda.image.url}}">
+    </div>
+    {% endif %}
+    <h1 class="h1-detail">{{tienda.name}}</h1>
+    <div class="description-flex">
+        <div>
+            {{tienda.description|safe}}
+        </div>
+        <div>
+            {% if tienda.web %}
+            <p><span>Web: </span><a href="{{tienda.url}}">{{tienda.web}}</a></p>
+            {% endif %}
+            {% if tienda.email %}
+            <p><span>Email: </span>{{tienda.email}}</p>
+            {% endif %}
+            {% if tienda.phone %}
+            <p><span>Teléfono: </span>{{tienda.phone}}</p>
+            {% endif %}
+        </div>
+    </div>
+</section>
+<div class="clearfix"></div>
+<hr>
+<section>
+    <h2>Productos</h2>
+    {% if productos %}
+        {% include "productos/forProductos.html" %}
+        {% include "mainApp/pagination.html" with results=productos %}
+    {% else %}
+        <p class="m-10">No hay productos.</p>
+    {% endif %}
+</section>
+{% if tienda.content %}
+    <hr>
+    <section class="content ck-content overflow-content">
+        {{tienda.content|safe}}
+    </section>
+{% endif %}
+{% endblock %}

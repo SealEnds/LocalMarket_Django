@@ -1,0 +1,25 @@
+{% for tienda in tiendas %}
+    <section class="article-item-tienda">
+        {% if tienda.image != 'null' and tienda.image|length >= 1 %}
+            <div class="image1">
+                <img src="{{tienda.image.url}}">
+            </div>
+        {% endif %}
+        <div class="data">
+            <h3><a href="{% url 'tienda' tienda.id %}">
+                {{tienda.name}}
+            </a></h3>
+            {% comment %} <p>
+                {% for tag in tienda.tags.all %}
+                <a href="{% url 'tag' tag.id %}">{{tag.name}}</span>
+                {% if forloop.counter < tienda.tags.all|length %}
+                {{' - '}}
+                {% endif %}
+                {% endfor %}
+            </p> {% endcomment %}
+            <span class="date"><a href="{{tienda.url}}" target="_blank">{{tienda.web}}</a></span>
+            <p>{{tienda.description|safe}}</p>
+        </div>
+        <div class="clearfix"></div>
+    </section>
+{% endfor %}

@@ -1,0 +1,1242 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300");
+@font-face {
+  font-family: "websymbols";
+  src: url("/static/fonts/websymbols-regular-webfont.eot?480400e3807d");
+  src: url("/static/fonts/websymbols-regular-webfont.eot?&480400e3807d#iesfix") format("embedded-opentype"), url("/static/fonts/websymbols-regular-webfont.woff?480400e3807d") format("woff"), url("/static/fonts/websymbols-regular-webfont.ttf?480400e3807d") format("truetype"), url("/static/fonts/websymbols-regular-webfont.svg?480400e3807d") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+
+/* line 14, mainApp/static/css/styles.scss */
+.websymbols {
+  font-family: "websymbols";
+  font-size: 90%; }
+
+/* line 19, mainApp/static/css/styles.scss */
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif, Arial, Helvetica;
+  text-decoration: none; }
+
+/* line 26, mainApp/static/css/styles.scss */
+body {
+  background-color: antiquewhite; }
+
+/* line 31, mainApp/static/css/styles.scss */
+.clearfix {
+  clear: both;
+  float: none; }
+
+/* line 36, mainApp/static/css/styles.scss */
+.image img {
+  width: 100%; }
+
+/* line 40, mainApp/static/css/styles.scss */
+.bg-white {
+  background-color: white; }
+
+/* line 45, mainApp/static/css/styles.scss */
+.content img {
+  width: auto !important;
+  max-height: 300px; }
+
+/* line 51, mainApp/static/css/styles.scss */
+.text-decoration:hover {
+  text-decoration: underline; }
+
+/* line 55, mainApp/static/css/styles.scss */
+.flex-end {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end; }
+
+/* line 61, mainApp/static/css/styles.scss */
+.align-center {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center; }
+
+/* line 68, mainApp/static/css/styles.scss */
+hr {
+  border: 0;
+  /* Remove the default border */
+  height: 3px;
+  /* Set the height of the line */
+  background-color: #15583d;
+  /* Set the color of the line */
+  width: 90%;
+  margin: 20px auto; }
+
+/* line 76, mainApp/static/css/styles.scss */
+.form-textarea-3 {
+  height: 50px; }
+
+/* line 80, mainApp/static/css/styles.scss */
+.m-10 {
+  margin-left: 10%; }
+
+/* line 85, mainApp/static/css/styles.scss */
+header div {
+  height: 122px;
+  background-color: #232828;
+  margin: 0 auto; }
+  /* line 90, mainApp/static/css/styles.scss */
+  header div #logotipo {
+    height: 130px;
+    margin: 0 auto; }
+    /* line 94, mainApp/static/css/styles.scss */
+    header div #logotipo img {
+      display: block;
+      width: 122px;
+      float: left;
+      margin-right: 40px;
+      padding-left: 25%;
+      background-image: linear-gradient(to right, #1f895e 20%, #28A877 70%); }
+    /* line 103, mainApp/static/css/styles.scss */
+    header div #logotipo h1 {
+      display: block;
+      padding-top: 50px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: lighter;
+      color: #2BA977; }
+
+/* line 114, mainApp/static/css/styles.scss */
+header nav {
+  height: 54px;
+  margin: 0 auto;
+  background-color: #1B1E1F;
+  border: 1px solid #333333;
+  box-shadow: 0px 8px 19px #919191;
+  font-size: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-left: 1%;
+  padding-right: 1%; }
+  /* line 127, mainApp/static/css/styles.scss */
+  header nav > ul {
+    list-style: none;
+    text-decoration: none; }
+    /* line 131, mainApp/static/css/styles.scss */
+    header nav > ul > li {
+      line-height: 54px;
+      float: left; }
+      /* line 135, mainApp/static/css/styles.scss */
+      header nav > ul > li > a {
+        display: block;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: #d1d4d6; }
+        /* line 141, mainApp/static/css/styles.scss */
+        header nav > ul > li > a:hover {
+          background-color: #2BA977;
+          box-shadow: 0px 0px 5px #444444 inset;
+          color: white; }
+      /* line 148, mainApp/static/css/styles.scss */
+      header nav > ul > li > ul {
+        display: none;
+        position: absolute;
+        color: white;
+        background-color: #2b2e2f;
+        text-align: left;
+        width: 160px;
+        box-shadow: 0px 2px 2px gray;
+        margin: 0px; }
+      /* line 160, mainApp/static/css/styles.scss */
+      header nav > ul > li:hover ul {
+        display: block;
+        list-style: none; }
+        /* line 164, mainApp/static/css/styles.scss */
+        header nav > ul > li:hover ul li {
+          border-bottom: 1px solid #444;
+          padding: 7px;
+          line-height: 24px;
+          font-size: 14px;
+          text-decoration: none;
+          transition: all 200ms; }
+          /* line 172, mainApp/static/css/styles.scss */
+          header nav > ul > li:hover ul li a {
+            color: #d1d4d6;
+            display: block; }
+            /* line 176, mainApp/static/css/styles.scss */
+            header nav > ul > li:hover ul li a:hover {
+              color: #2BA977;
+              transition: all 200ms; }
+  /* line 187, mainApp/static/css/styles.scss */
+  header nav #search-template {
+    margin-top: 7px;
+    margin-left: 5px;
+    margin-right: 5px; }
+    /* line 191, mainApp/static/css/styles.scss */
+    header nav #search-template form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: white;
+      border-radius: 10px;
+      width: 100%; }
+    /* line 199, mainApp/static/css/styles.scss */
+    header nav #search-template input[type="text"] {
+      padding: 6px;
+      font-size: 14px;
+      border-radius: 15px;
+      border: none;
+      outline: none;
+      padding-left: 10px; }
+    /* line 207, mainApp/static/css/styles.scss */
+    header nav #search-template select {
+      padding: 6px;
+      font-size: 14px;
+      background-color: #2ba977;
+      color: white;
+      cursor: pointer; }
+      /* line 214, mainApp/static/css/styles.scss */
+      header nav #search-template select option {
+        background-color: #ffffff;
+        /* Background color */
+        color: #2a2a2a;
+        /* Text color */
+        font-weight: bold;
+        -webkit-appearance: none;
+        /* Remove default arrow in Safari */
+        -moz-appearance: none;
+        /* Remove default arrow in Firefox */
+        appearance: none; }
+        /* line 221, mainApp/static/css/styles.scss */
+        header nav #search-template select option:hover {
+          /* Hover styles for the options */
+          background-color: #ccc;
+          color: #000; }
+    /* line 228, mainApp/static/css/styles.scss */
+    header nav #search-template input[type="submit"] {
+      padding: 11px 16px;
+      border: none;
+      border-radius-end: 20px;
+      border-start-end-radius: 9px;
+      border-end-end-radius: 9px;
+      background-color: #1e945b;
+      color: white;
+      font-size: 16px;
+      cursor: pointer; }
+      /* line 238, mainApp/static/css/styles.scss */
+      header nav #search-template input[type="submit"]:hover {
+        background-color: #45b667; }
+
+/* line 247, mainApp/static/css/styles.scss */
+main #content {
+  width: 99%;
+  min-height: 930px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 40px; }
+  /* line 254, mainApp/static/css/styles.scss */
+  main #content .box {
+    width: 95%;
+    margin: 0 auto;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    /* Elementos pasados por content a box */
+    /* Additional styling can be applied as needed */
+    /* _____________________________________ */
+    /* paginas estáticas */
+    /* _______________________________________ */
+    /* Productos _________________________________*/
+    /* ________________________________________ Fin Productos*/ }
+    /* line 264, mainApp/static/css/styles.scss */
+    main #content .box h1 {
+      font-size: 50px;
+      text-align: center;
+      color: #333; }
+    /* line 270, mainApp/static/css/styles.scss */
+    main #content .box h1, main #content .box h2, main #content .box h3 {
+      text-align: center; }
+    /* line 274, mainApp/static/css/styles.scss */
+    main #content .box h1, main #content .box p, main #content .box h3, main #content .box ul {
+      margin-bottom: 5px; }
+    /* line 278, mainApp/static/css/styles.scss */
+    main #content .box ul, main #content .box ol {
+      margin-left: 20px;
+      margin-bottom: 10px; }
+    /* line 283, mainApp/static/css/styles.scss */
+    main #content .box a {
+      color: #000000; }
+      /* line 286, mainApp/static/css/styles.scss */
+      main #content .box a:hover {
+        color: #1b7c55;
+        transition: all 200ms; }
+    /* line 292, mainApp/static/css/styles.scss */
+    main #content .box form {
+      width: 40%;
+      margin: auto; }
+      /* line 296, mainApp/static/css/styles.scss */
+      main #content .box form input, main #content .box form label {
+        display: block;
+        padding: 5px;
+        padding-left: 0px; }
+      /* line 302, mainApp/static/css/styles.scss */
+      main #content .box form input[type="text"]:not(.ck):not(.ck), main #content .box form input[type="email"]:not(.ck):not(.ck), main #content .box form input[type="password"]:not(.ck):not(.ck), main #content .box form textarea, main #content .box form select:not(.ck) {
+        width: 100%;
+        margin-bottom: 10px;
+        padding-left: 5px; }
+      /* line 308, mainApp/static/css/styles.scss */
+      main #content .box form select {
+        width: 100px;
+        padding: 5px; }
+      /* line 313, mainApp/static/css/styles.scss */
+      main #content .box form input[type="submit"]:not(.ck), main #content .box form input[type="button"]:not(.ck), main #content .box form button:not(.ck) {
+        padding: 10px;
+        margin-top: 5px;
+        background: #2ba977;
+        border: 1px solid #444;
+        color: white;
+        transition: 300ms all; }
+        /* line 321, mainApp/static/css/styles.scss */
+        main #content .box form input[type="submit"]:not(.ck):hover, main #content .box form input[type="button"]:not(.ck):hover, main #content .box form button:not(.ck):hover {
+          cursor: pointer;
+          background: #1f7e58; }
+      /* line 326, mainApp/static/css/styles.scss */
+      main #content .box form .disabled-button {
+        background: #9bbbae !important; }
+        /* line 328, mainApp/static/css/styles.scss */
+        main #content .box form .disabled-button:hover {
+          background: #9bbbae !important;
+          cursor: auto !important; }
+    /* line 335, mainApp/static/css/styles.scss */
+    main #content .box textarea {
+      padding-top: 5px; }
+    /* line 339, mainApp/static/css/styles.scss */
+    main #content .box .image1 {
+      float: left;
+      margin-right: 5%;
+      max-width: 45%; }
+      /* line 344, mainApp/static/css/styles.scss */
+      main #content .box .image1 img {
+        width: 100%; }
+    /* line 348, mainApp/static/css/styles.scss */
+    main #content .box .image2 {
+      float: left;
+      margin-right: 3%;
+      margin-left: 2%;
+      max-width: 45%; }
+      /* line 354, mainApp/static/css/styles.scss */
+      main #content .box .image2 img {
+        max-height: 300px;
+        width: 100%; }
+    /* line 359, mainApp/static/css/styles.scss */
+    main #content .box .image-producto {
+      margin-left: 5%; }
+    /* line 364, mainApp/static/css/styles.scss */
+    main #content .box .article-container {
+      display: flex;
+      /* or grid */
+      flex-direction: column;
+      /* or grid-template-columns: 1fr; */
+      width: 100%; }
+    /* line 369, mainApp/static/css/styles.scss */
+    main #content .box .article-item {
+      margin-bottom: 20px;
+      /* Adjust as needed */
+      border: 1px solid #ccc;
+      /* Optional: Add borders or background */
+      padding: 10px;
+      /* Optional: Add padding */ }
+    /* line 375, mainApp/static/css/styles.scss */
+    main #content .box .image1 img {
+      max-width: 100%;
+      /* Ensure images don't exceed container width */ }
+    /* line 378, mainApp/static/css/styles.scss */
+    main #content .box .edit-article-detail {
+      display: flex;
+      flex-flow: row;
+      justify-content: end;
+      min-height: 24px; }
+      /* line 383, mainApp/static/css/styles.scss */
+      main #content .box .edit-article-detail a {
+        background-color: #15583d;
+        color: white;
+        border: 1px inset #ccc;
+        padding: 10px; }
+        /* line 388, mainApp/static/css/styles.scss */
+        main #content .box .edit-article-detail a:hover {
+          background-color: #1d7c56; }
+    /* line 393, mainApp/static/css/styles.scss */
+    main #content .box .h1-detail {
+      margin-top: 0px !important; }
+    /* line 396, mainApp/static/css/styles.scss */
+    main #content .box .description-flex {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 7%;
+      padding-left: 3%;
+      padding-top: 5px; }
+      /* line 404, mainApp/static/css/styles.scss */
+      main #content .box .description-flex div {
+        margin-top: 10px;
+        margin-bottom: 10px; }
+    /* line 409, mainApp/static/css/styles.scss */
+    main #content .box .overflow-content {
+      overflow: hidden;
+      max-height: 1000px; }
+    /* line 417, mainApp/static/css/styles.scss */
+    main #content .box .page {
+      max-width: 90%;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff; }
+      /* line 423, mainApp/static/css/styles.scss */
+      main #content .box .page div {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff; }
+      /* line 430, mainApp/static/css/styles.scss */
+      main #content .box .page p {
+        margin: 10px 0;
+        color: #555; }
+        /* line 434, mainApp/static/css/styles.scss */
+        main #content .box .page p strong {
+          color: #000; }
+      /* line 440, mainApp/static/css/styles.scss */
+      main #content .box .page img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto; }
+    /* line 450, mainApp/static/css/styles.scss */
+    main #content .box .wrap-productos {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: stretch; }
+      /* line 456, mainApp/static/css/styles.scss */
+      main #content .box .wrap-productos .article-item-product {
+        display: flex;
+        flex-direction: column;
+        width: 33%;
+        margin: 10px auto; }
+        /* line 462, mainApp/static/css/styles.scss */
+        main #content .box .wrap-productos .article-item-product .card {
+          flex-grow: 1;
+          box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.3), 0px 1px 1px rgba(0, 0, 0, 0.3);
+          transition: 200ms;
+          background: #fff;
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: space-between;
+          overflow: hidden; }
+          /* line 472, mainApp/static/css/styles.scss */
+          main #content .box .wrap-productos .article-item-product .card .card__title {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px 0px 40px; }
+            /* line 479, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__title h3 {
+              width: 25%;
+              text-align: right;
+              margin: 0;
+              color: #252525;
+              font-weight: 600;
+              font-size: 20px;
+              text-transform: uppercase; }
+            /* line 489, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__title .icon {
+              flex: 1 0 10px;
+              background: #ffffff00;
+              color: #fff;
+              padding: 10px 10px;
+              transition: 200ms; }
+              /* line 496, mainApp/static/css/styles.scss */
+              main #content .box .wrap-productos .article-item-product .card .card__title .icon > a {
+                color: #fff; }
+              /* line 500, mainApp/static/css/styles.scss */
+              main #content .box .wrap-productos .article-item-product .card .card__title .icon:hover {
+                background: #252525; }
+          /* line 506, mainApp/static/css/styles.scss */
+          main #content .box .wrap-productos .article-item-product .card .featured_text {
+            width: 70%; }
+            /* line 508, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .featured_text h2 {
+              margin: 0;
+              padding: 0;
+              font-weight: 800;
+              font-family: "Montserrat", sans-serif;
+              font-size: 34px;
+              line-height: 40px;
+              text-align: left;
+              color: #181e28; }
+            /* line 519, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .featured_text p {
+              margin: 0;
+              padding: 0; }
+              /* line 523, mainApp/static/css/styles.scss */
+              main #content .box .wrap-productos .article-item-product .card .featured_text p.sub {
+                font-family: "Montserrat", sans-serif;
+                font-size: 26px;
+                text-transform: uppercase;
+                color: #686e77;
+                font-weight: 300;
+                margin-bottom: 5px; }
+              /* line 532, mainApp/static/css/styles.scss */
+              main #content .box .wrap-productos .article-item-product .card .featured_text p.price {
+                font-family: "Fjalla One", sans-serif;
+                color: #252525;
+                font-size: 26px; }
+          /* line 540, mainApp/static/css/styles.scss */
+          main #content .box .wrap-productos .article-item-product .card .card__body {
+            padding: 0 10px;
+            display: flex;
+            flex-flow: row no-wrap;
+            margin-bottom: 7px;
+            align-items: center; }
+            /* line 547, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__body > .half {
+              box-sizing: border-box;
+              padding: 0 15px;
+              flex: 1 0 50%; }
+            /* line 553, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__body .image {
+              padding-top: 15px;
+              width: 80%;
+              margin: auto; }
+              /* line 558, mainApp/static/css/styles.scss */
+              main #content .box .wrap-productos .article-item-product .card .card__body .image img {
+                display: block;
+                width: inherit;
+                max-height: 200px;
+                margin: auto; }
+            /* line 566, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__body .description {
+              min-height: 190px; }
+              /* line 569, mainApp/static/css/styles.scss */
+              main #content .box .wrap-productos .article-item-product .card .card__body .description p {
+                margin: 0;
+                font-family: "Open Sans", sans-serif;
+                font-weight: 300;
+                line-height: 27px;
+                font-size: 16px;
+                color: #555; }
+            /* line 581, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__body .reviews > span {
+              font-family: "Open Sans", sans-serif;
+              font-size: 14px;
+              margin-left: 5px;
+              color: #555; }
+          /* line 590, mainApp/static/css/styles.scss */
+          main #content .box .wrap-productos .article-item-product .card .card__footer {
+            padding: 15px 60px;
+            display: flex;
+            flex-flow: row no-wrap;
+            align-items: center;
+            position: relative;
+            justify-content: space-between; }
+            /* line 598, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__footer::before {
+              content: "";
+              position: absolute;
+              display: block;
+              top: 0;
+              width: 75%;
+              height: 3px;
+              background: linear-gradient(to right, #ddd 0%, #5cb520 60%, #15ad4d 100%); }
+            /* line 609, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__footer .action button {
+              cursor: pointer;
+              border: 1px solid #32b128;
+              padding: 7px 25px;
+              border-radius: 99px;
+              color: #fff;
+              background: #4ca816;
+              font-family: "Open Sans", sans-serif;
+              font-size: 16px;
+              transition: 200ms; }
+              /* line 620, mainApp/static/css/styles.scss */
+              main #content .box .wrap-productos .article-item-product .card .card__footer .action button:hover {
+                background: #fff;
+                color: #7bd811; }
+            /* line 626, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__footer span.stock {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 600;
+              color: #a1cc16; }
+            /* line 631, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__footer span.no-stock {
+              font-family: "Montserrat", sans-serif;
+              font-weight: 600;
+              color: #cc9516; }
+            /* line 636, mainApp/static/css/styles.scss */
+            main #content .box .wrap-productos .article-item-product .card .card__footer .price {
+              color: #158a5b;
+              font-weight: bold;
+              font-size: 18px;
+              margin-top: 6px; }
+    /* line 648, mainApp/static/css/styles.scss */
+    main #content .box .volver {
+      font-size: 16px;
+      font-weight: bold; }
+      /* line 651, mainApp/static/css/styles.scss */
+      main #content .box .volver a {
+        color: #1d7c56; }
+        /* line 653, mainApp/static/css/styles.scss */
+        main #content .box .volver a:hover {
+          color: #15adaa; }
+    /* line 659, mainApp/static/css/styles.scss */
+    main #content .box .edit-delete-product {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: end; }
+      /* line 663, mainApp/static/css/styles.scss */
+      main #content .box .edit-delete-product form {
+        margin: 0;
+        width: 10%; }
+        /* line 666, mainApp/static/css/styles.scss */
+        main #content .box .edit-delete-product form .edit {
+          background-color: #1a7550 !important; }
+          /* line 668, mainApp/static/css/styles.scss */
+          main #content .box .edit-delete-product form .edit:hover {
+            background: #15ad6b !important; }
+        /* line 672, mainApp/static/css/styles.scss */
+        main #content .box .edit-delete-product form .delete {
+          background-color: #7e271f !important; }
+          /* line 674, mainApp/static/css/styles.scss */
+          main #content .box .edit-delete-product form .delete:hover {
+            background-color: #c05248 !important; }
+
+/* line 684, mainApp/static/css/styles.scss */
+.red {
+  color: coral; }
+
+/* line 687, mainApp/static/css/styles.scss */
+.message,
+.alert {
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: white;
+  text-align: center; }
+
+/* line 695, mainApp/static/css/styles.scss */
+.alert-success {
+  background: #1f7e58; }
+
+/* line 698, mainApp/static/css/styles.scss */
+.alert-warning {
+  background: #7e271f; }
+
+/* line 702, mainApp/static/css/styles.scss */
+.title {
+  color: #444;
+  letter-spacing: 1px;
+  font-size: 30px;
+  margin-bottom: 10px;
+  margin-top: 5px; }
+
+/* line 710, mainApp/static/css/styles.scss */
+.date {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: grey; }
+
+/* line 717, mainApp/static/css/styles.scss */
+.content {
+  line-height: 25px; }
+
+/* line 721, mainApp/static/css/styles.scss */
+.article-item {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  clear: both; }
+  /* line 728, mainApp/static/css/styles.scss */
+  .article-item .image1 {
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden; }
+    /* line 734, mainApp/static/css/styles.scss */
+    .article-item .image1 img {
+      height: 200px; }
+  /* line 739, mainApp/static/css/styles.scss */
+  .article-item .data {
+    float: left;
+    padding: 20px;
+    padding-top: 0px; }
+  /* line 745, mainApp/static/css/styles.scss */
+  .article-item h2 {
+    display: block;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 5px; }
+  /* line 752, mainApp/static/css/styles.scss */
+  .article-item .date {
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px; }
+  /* line 759, mainApp/static/css/styles.scss */
+  .article-item .btn-delete {
+    padding: 10px;
+    background: coral;
+    color: white;
+    border: 2px black;
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center; }
+
+/*footer. Pie de Página------------------------------------------------------------------------------------*/
+/* line 772, mainApp/static/css/styles.scss */
+footer {
+  width: 100%;
+  background-color: #1B1E1F;
+  border: 1px solid #333;
+  color: #d1d4d6;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 20px gray;
+  overflow: hidden;
+  height: 430px; }
+  /* line 785, mainApp/static/css/styles.scss */
+  footer #footer-wrap {
+    width: 90%;
+    margin: 0 auto; }
+    /* line 789, mainApp/static/css/styles.scss */
+    footer #footer-wrap .footer-article {
+      width: 25%;
+      display: block;
+      margin: 0 auto;
+      float: left;
+      margin: 4%;
+      overflow: none; }
+      /* line 797, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .title-footer {
+        display: block;
+        height: 50px;
+        border: 1px solid #ccc;
+        background: url("/static/img/pxgray.png?e9a5ef4836f9"), white;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-family: "bebas";
+        font-size: 38px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        text-align: center;
+        color: black;
+        border-radius: 5px;
+        padding-left: 4%;
+        padding-right: 4%; }
+        /* line 814, mainApp/static/css/styles.scss */
+        footer #footer-wrap .footer-article .title-footer #browsers img {
+          width: 15%; }
+        /* line 818, mainApp/static/css/styles.scss */
+        footer #footer-wrap .footer-article .title-footer #copy {
+          margin: 10px;
+          font-size: 15px;
+          letter-spacing: 1px;
+          text-align: center; }
+      /* line 827, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article #footer-nav ul li {
+        width: 75%;
+        border-bottom: 1px solid #7A7A7A;
+        margin: 20px;
+        font-size: 25px;
+        padding-bottom: 10px; }
+      /* line 834, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article #footer-nav a {
+        text-decoration: none;
+        color: #37bcf9;
+        transition: all 300ms; }
+        /* line 839, mainApp/static/css/styles.scss */
+        footer #footer-wrap .footer-article #footer-nav a:hover {
+          padding-left: 20px;
+          color: white;
+          width: 100%; }
+      /* line 847, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article #developed-for {
+        height: min-content; }
+      /* line 851, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article img {
+        margin-bottom: 15px;
+        margin-top: 15px; }
+      /* line 857, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article #aside .aside-box {
+        width: 60%;
+        height: 240px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+        margin-top: 20px;
+        background-color: white;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3), 0px 1px 0px white inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset; }
+      /* line 869, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box-partition {
+        height: 60px; }
+      /* line 872, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box-partition a {
+        text-decoration: none;
+        color: #555;
+        line-height: 50px;
+        font-size: 30px;
+        margin-left: 12%;
+        float: left; }
+      /* line 880, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article #social .overlay {
+        display: block;
+        float: left;
+        line-height: 58px;
+        margin-left: 10%;
+        color: transparent; }
+      /* line 887, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #twitter:hover a {
+        color: #1DA1F2; }
+      /* line 890, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #twitter:hover .overlay {
+        color: #1DA1F2;
+        animation: socials-animation 200ms linear; }
+      /* line 894, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #facebook:hover a {
+        color: #5D79B2; }
+      /* line 897, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #facebook:hover .overlay {
+        color: #5D79B2;
+        animation: socials-animation 200ms linear; }
+      /* line 901, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #google:hover a {
+        color: #d9f539; }
+      /* line 904, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #google:hover .overlay {
+        color: #b9d612;
+        animation: socials-animation 200ms linear; }
+      /* line 908, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #youtube:hover a {
+        color: #b31f1f; }
+      /* line 911, mainApp/static/css/styles.scss */
+      footer #footer-wrap .footer-article .aside-box #youtube:hover .overlay {
+        color: #b31f1f;
+        animation: socials-animation 200ms linear; }
+
+@keyframes socials-animation {
+  0% {
+    transform: translateX(-80%);
+    opacity: 0; }
+  100% {
+    transform: translateX("initial");
+    opacity: 1; } }
+
+/* Pagination _______________________________ */
+/* line 929, mainApp/static/css/styles.scss */
+.paginator {
+  margin-top: 20px;
+  text-align: center; }
+  /* line 933, mainApp/static/css/styles.scss */
+  .paginator a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333; }
+    /* line 941, mainApp/static/css/styles.scss */
+    .paginator a:hover {
+      background-color: #f0f0f0; }
+  /* line 946, mainApp/static/css/styles.scss */
+  .paginator .actual {
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    margin: 0 5px; }
+
+/* ___________________________________________ */
+/* Tienda _________________________________*/
+/* line 957, mainApp/static/css/styles.scss */
+.perfil-tiendas {
+  background-color: #15adaa; }
+  /* line 959, mainApp/static/css/styles.scss */
+  .perfil-tiendas h2 {
+    padding-bottom: 10px; }
+  /* line 962, mainApp/static/css/styles.scss */
+  .perfil-tiendas .articles-prefil-tiendas {
+    padding-top: 20px;
+    padding-bottom: 5px; }
+
+/* line 967, mainApp/static/css/styles.scss */
+.article-item-tienda {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: #fdfdfd;
+  transition: box-shadow 0.3s ease;
+  height: 210px; }
+  /* line 977, mainApp/static/css/styles.scss */
+  .article-item-tienda:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+  /* line 981, mainApp/static/css/styles.scss */
+  .article-item-tienda .image1 {
+    flex: 1 1 46%;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    /* line 988, mainApp/static/css/styles.scss */
+    .article-item-tienda .image1 img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 5px; }
+  /* line 996, mainApp/static/css/styles.scss */
+  .article-item-tienda .data {
+    flex: 1 1 54%;
+    display: flex;
+    padding: 30px;
+    flex-direction: column; }
+    /* line 1002, mainApp/static/css/styles.scss */
+    .article-item-tienda .data h3 {
+      margin-bottom: 10px;
+      text-align: center;
+      font-size: 24px; }
+      /* line 1007, mainApp/static/css/styles.scss */
+      .article-item-tienda .data h3 a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+        transition: color 0.3s ease; }
+        /* line 1013, mainApp/static/css/styles.scss */
+        .article-item-tienda .data h3 a:hover {
+          color: #007BFF; }
+    /* line 1019, mainApp/static/css/styles.scss */
+    .article-item-tienda .data p {
+      margin-bottom: 10px;
+      color: #666;
+      padding: 15px;
+      padding-left: 3%;
+      padding-right: 3%;
+      flex: 1;
+      overflow: hidden; }
+    /* line 1029, mainApp/static/css/styles.scss */
+    .article-item-tienda .data a {
+      text-decoration: none;
+      color: #007BFF; }
+    /* line 1034, mainApp/static/css/styles.scss */
+    .article-item-tienda .data .date {
+      display: block;
+      margin-top: 10px;
+      font-size: 0.9em;
+      color: #999; }
+  /* line 1042, mainApp/static/css/styles.scss */
+  .article-item-tienda .clearfix {
+    clear: both; }
+
+/* ________________________________________ Fin tiendas*/
+/* Edit button */
+/* line 1051, mainApp/static/css/styles.scss */
+.button1 {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #df8f6f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center; }
+  /* line 1060, mainApp/static/css/styles.scss */
+  .button1:hover {
+    background-color: #d6a08b; }
+
+/* line 1064, mainApp/static/css/styles.scss */
+.edit-button {
+  background-color: #467aae !important; }
+  /* line 1066, mainApp/static/css/styles.scss */
+  .edit-button:hover {
+    background-color: #2695b1 !important; }
+
+/* ______________________________________________ */
+/* Delete button*/
+/* line 1073, mainApp/static/css/styles.scss */
+.delete-button {
+  background-color: #df8f6f !important; }
+  /* line 1075, mainApp/static/css/styles.scss */
+  .delete-button:hover {
+    background-color: #ebab92 !important; }
+
+/* _______________________________________________*/
+/* Forms */
+/* Styles for form container */
+/* line 1083, mainApp/static/css/styles.scss */
+.form-container {
+  width: 100%;
+  /* Adjust width as needed */
+  margin: 0 auto;
+  /* Center the form */ }
+  /* line 1087, mainApp/static/css/styles.scss */
+  .form-container form {
+    width: 100% !important;
+    /* Styles for form fields */
+    /* Styles for input fields */
+    /* Styles for file input */
+    /* Styles for check input */
+    /* Styles for submit button */
+    /* Hover effect for submit button */ }
+    /* line 1091, mainApp/static/css/styles.scss */
+    .form-container form .form-group {
+      margin-bottom: 20px;
+      /* Add space between form groups */ }
+    /* line 1096, mainApp/static/css/styles.scss */
+    .form-container form label {
+      width: 65%;
+      margin: auto;
+      padding: 3px !important; }
+    /* line 1101, mainApp/static/css/styles.scss */
+    .form-container form .form-control {
+      width: 40% !important;
+      display: block;
+      margin: auto !important;
+      padding: 1px;
+      border: 1px solid #ced4da;
+      /* Add border */
+      border-radius: 5px;
+      /* Round borders */
+      outline: none;
+      /* Remove default outline */ }
+    /* line 1110, mainApp/static/css/styles.scss */
+    .form-container form .form-textarea {
+      padding: 10px;
+      font-size: 14px;
+      height: 40px; }
+    /* line 1115, mainApp/static/css/styles.scss */
+    .form-container form .form-textarea-2 {
+      height: 26px; }
+    /* line 1118, mainApp/static/css/styles.scss */
+    .form-container form .form-number {
+      width: 80px !important;
+      padding: 10px 10px !important;
+      font-size: 14px; }
+    /* line 1123, mainApp/static/css/styles.scss */
+    .form-container form .form-multipicklist {
+      width: 17% !important;
+      max-height: 128px; }
+      /* line 1126, mainApp/static/css/styles.scss */
+      .form-container form .form-multipicklist option {
+        padding: 7px; }
+    /* line 1130, mainApp/static/css/styles.scss */
+    .form-container form .form-submit {
+      display: flex;
+      flex-direction: row wrap;
+      justify-content: end;
+      width: 90%; }
+      /* line 1135, mainApp/static/css/styles.scss */
+      .form-container form .form-submit input[type="submit"] {
+        padding: 15px;
+        font-size: 16px; }
+    /* line 1140, mainApp/static/css/styles.scss */
+    .form-container form .form-check-input {
+      width: 60% !important; }
+    /* line 1143, mainApp/static/css/styles.scss */
+    .form-container form .ck-voice-label {
+      display: none !important; }
+    /* line 1146, mainApp/static/css/styles.scss */
+    .form-container form .ck-content {
+      min-height: 140px;
+      max-height: 700px;
+      padding-left: 1%;
+      padding-right: 1%; }
+    /* line 1154, mainApp/static/css/styles.scss */
+    .form-container form input[type="file"] {
+      height: 50px;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer; }
+      /* line 1162, mainApp/static/css/styles.scss */
+      .form-container form input[type="file"]:hover {
+        border-color: #999; }
+      /* line 1166, mainApp/static/css/styles.scss */
+      .form-container form input[type="file"]::-webkit-file-upload-button {
+        /* Change the text */
+        content: "Choose Image";
+        /* Customize appearance */
+        background-color: #007bff;
+        color: #fff;
+        display: block;
+        width: 40%;
+        margin: auto;
+        padding: 50px 50px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; }
+      /* line 1181, mainApp/static/css/styles.scss */
+      .form-container form input[type="file"]::-moz-file-upload-button {
+        /* For Firefox */
+        /* Change the text */
+        content: "Choose Image";
+        /* Customize appearance */
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; }
+      /* line 1194, mainApp/static/css/styles.scss */
+      .form-container form input[type="file"]::file-selector-button {
+        /* For Safari */
+        /* Change the text */
+        content: "Choose Image";
+        /* Customize appearance */
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; }
+      /* line 1207, mainApp/static/css/styles.scss */
+      .form-container form input[type="file"]::placeholder {
+        color: #ff0000;
+        font-style: italic;
+        text-align: center; }
+    /* line 1215, mainApp/static/css/styles.scss */
+    .form-container form .form-check-input {
+      width: 20px;
+      /* Increase check input size */
+      height: 20px; }
+    /* line 1219, mainApp/static/css/styles.scss */
+    .form-container form input[type="text"]:not(.ck),
+    .form-container form input[type="number"]:not(.ck, .form-number),
+    .form-container form input[type="email"]:not(.ck) {
+      min-height: 20px;
+      padding-left: 1% !important;
+      font-size: 14px; }
+    /* line 1227, mainApp/static/css/styles.scss */
+    .form-container form input[type="submit"] {
+      background-color: #007bff;
+      /* Example color, change as needed */
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer; }
+    /* line 1237, mainApp/static/css/styles.scss */
+    .form-container form input[type="submit"]:hover {
+      background-color: #0056b3;
+      /* Example color, change as needed */ }
+
+/* _______ */
+/* Review _______________________________________ */
+/* line 1247, mainApp/static/css/styles.scss */
+.review-section h3 {
+  font-size: 30px;
+  margin-top: 10px; }
+
+/* line 1251, mainApp/static/css/styles.scss */
+.review-section form {
+  width: 80% !important;
+  margin: auto; }
+  /* line 1255, mainApp/static/css/styles.scss */
+  .review-section form .form-inputs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    /* line 1260, mainApp/static/css/styles.scss */
+    .review-section form .form-inputs .form-group {
+      min-width: 5%; }
+      /* line 1263, mainApp/static/css/styles.scss */
+      .review-section form .form-inputs .form-group input[type="number"],
+      .review-section form .form-inputs .form-group textarea {
+        padding: 5px; }
+    /* line 1269, mainApp/static/css/styles.scss */
+    .review-section form .form-inputs .form-group:nth-child(2) {
+      width: 50%; }
+      /* line 1272, mainApp/static/css/styles.scss */
+      .review-section form .form-inputs .form-group:nth-child(2) .form-textarea {
+        width: 100%; }
+
+/* line 1278, mainApp/static/css/styles.scss */
+.review-section h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  text-align: center; }
+
+/* line 1284, mainApp/static/css/styles.scss */
+.review-section .review {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  margin: 0.5rem;
+  max-width: 600px;
+  width: 60%;
+  margin: auto; }
+  /* line 1294, mainApp/static/css/styles.scss */
+  .review-section .review .review-content {
+    margin-bottom: 1rem; }
+    /* line 1297, mainApp/static/css/styles.scss */
+    .review-section .review .review-content .review-header {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between; }
+      /* line 1302, mainApp/static/css/styles.scss */
+      .review-section .review .review-content .review-header .review-date {
+        color: #a19f9f; }
+    /* line 1306, mainApp/static/css/styles.scss */
+    .review-section .review .review-content .review-content {
+      margin-top: 10px; }
+  /* line 1311, mainApp/static/css/styles.scss */
+  .review-section .review .review-options {
+    display: flex;
+    justify-content: flex-end !important; }
+    /* line 1315, mainApp/static/css/styles.scss */
+    .review-section .review .review-options form {
+      display: inline-block;
+      width: min-content !important; }
+  /* line 1322, mainApp/static/css/styles.scss */
+  .review-section .review .star {
+    display: inline-block;
+    width: 16px; }
+    /* line 1325, mainApp/static/css/styles.scss */
+    .review-section .review .star img {
+      width: 16px !important; }
+
+/* ______________________________________________ */
+/* Mobile ___________________________________________________________________ */
+@media (max-width: 1000px) {
+  /* line 1336, mainApp/static/css/styles.scss */
+  nav {
+    display: flex;
+    flex-flow: column wrap;
+    height: 157px !important; }
+    /* line 1341, mainApp/static/css/styles.scss */
+    nav ul {
+      width: 100%; }
+  /* line 1347, mainApp/static/css/styles.scss */
+  .wrap-productos .article-item-product {
+    width: 49% !important; } }
+
+@media (max-width: 600px) {
+  /* line 1356, mainApp/static/css/styles.scss */
+  .wrap-productos .article-item-product {
+    width: 90% !important; } }
+
+@media (max-width: 450px) {
+  /* line 1365, mainApp/static/css/styles.scss */
+  nav #search-template input[type="text"],
+  nav #search-template select {
+    padding: 0px !important; }
+  /* line 1370, mainApp/static/css/styles.scss */
+  nav .nav-page {
+    display: none; } }
+
+/* __________________________________________________________________________ */

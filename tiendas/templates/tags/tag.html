@@ -1,0 +1,18 @@
+{% extends 'layouts/layout.html' %}
+{% block title %} {{tag.name}} {% endblock %}
+{% block content %}
+    <h1>{{tag.name}}</h1>
+    <p>{{tag.description}}</p>
+    <div>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="message alert-success message">
+                    {{message}}
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        {% include "tiendas/forTiendas.html" %}
+        {% comment %} {% include "tiendas/forTiendas.html" with tiendas=tag.tienda_set.all %} Esta forma también vale y no habría que pasar tiendas como parámetro {% endcomment %}
+    </div>
+{% endblock %}

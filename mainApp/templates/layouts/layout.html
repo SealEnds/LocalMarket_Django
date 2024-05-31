@@ -1,0 +1,116 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    {% load compress %}
+    {% compress css %}
+    <link rel="stylesheet" type="text/x-scss" href="{% static 'css/styles.scss' %}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/content-styles.css' %}" >
+    {% endcompress %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.png' %}" >
+    {% block scripts %}
+    <script src="{% static 'js/ckeditor.js' %}"></script>
+    <script  src="{% static 'js/customCKeditor.js' %}"></script>
+    {% comment %} {% load render_bundle from webpack_loader %} {% endcomment %}
+    {% comment %} {% render_bundle 'main' 'js' %} {% endcomment %}
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <div>
+            <div id="logotipo">
+                <img src="{% static 'img/django.png' %}" alt="yango" />
+                <h1 class="logo-title">TFC</h1>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'tiendas' %}">Tiendas</a>
+                </li>
+                <li>
+                    <a href="{% url 'tiendas' %}">Filtros</a>
+                    <ul>
+                        {% for tag in tags %}
+                            <li>
+                                <a href="{% url 'tag' tag.0 %}">{{tag.1}}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% for pagina in paginas %}
+                    <li class="nav-page">
+                        {% comment %} <a href="{% url "pagina" pagina.2 %}">{{pagina.1}}</a> {% endcomment %}
+                        <a href="{% url "pagina" pagina.2 %}">{{pagina.1}}</a>
+                    </li>
+                {% endfor %}
+                </ul>
+                <ul>
+                    <li id="search-template">
+                        {% include "layouts/searchTemplate.html" %}
+                    </li>
+                </ul>
+                <ul>
+                    {% if user.email %}
+                    <li>
+                        <a href="{% url 'perfil' %}">Perfil de {{request.user.username}}</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'registro' %}">Registro</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                <!-- <strong>Original content in block</strong> -->
+                {% endblock %}
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div id="footer-wrap"> 
+            <div class="footer-article">
+                <nav id="footer-nav">
+                    <ul>
+                        <li><a href="{% url 'tiendas' %}">Inicio</a></li>
+                        {% for pagina in paginas %}
+                            <li><a href="{% url "pagina" pagina.2 %}">{{pagina.1}}</a></li>
+                        {% endfor %}
+                    </ul> 
+                </nav>
+            </div>
+           <div class="footer-article">
+           </div>
+           <div class="footer-article">
+                <div id="social">
+                    <h3 class="title">Redes sociales</h3>
+                    <div class="aside-box">
+                    <div id="linkedin" class="aside-box-partition">
+                        <a href="https://www.linkedin.com/in/vpq377b83296" class="websymbols">l</a>
+                        <p class="overlay">Linkedin</p>
+                    </div>
+                    </div>
+                </div>
+           </div>
+
+        </div>
+    </footer>
+</body>
+</html>

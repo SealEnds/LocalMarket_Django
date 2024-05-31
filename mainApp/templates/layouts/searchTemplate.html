@@ -1,0 +1,15 @@
+<form method="get" action="{% url 'search' %}" >
+    {% csrf_token %}
+    <input id="query" name="query" type="text" placeholder="Buscar..." {% if query and query != '' %}value="{{ query }}"{% endif %} />
+    <select id="model" name="model">
+        <option value="producto" {% if model == 'producto' %}selected{% endif %}>Producto</option>
+        <option value="tienda" {% if model == 'tienda' %}selected{% endif %}>Tienda</option>
+    </select>
+    <select id="category" name="category">
+        <option value="all" {% if category == 'all' %}selected{% endif %}>All</option>
+        {% for tag in tags %}
+            <option value="{{tag.1}}" {% if category == tag.1 %}selected{% endif %}>{{tag.1}}</option>
+        {% endfor %}
+    </select>
+    <input class="websymbols" type="submit" id="search-submit" name="search-submit" value="L"/>
+</form>

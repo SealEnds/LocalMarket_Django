@@ -1,0 +1,40 @@
+{% load static %}
+{% if reviews %}
+    {% for review in reviews %}
+        <div class="review">
+            <div class="review-content">
+                {% comment %} con review.user se saca la propiedad name de user {% endcomment %}
+                {% if title == 'Perfil'  %}
+                    <p>{{review.producto.name}}</p>
+                {% endif %}
+                <div class="review-header">
+                    <p><span>{{review.user}}</span> - <span class="review-date">{{review.updated_at}}</span></p>
+                    <div>
+                        {% for i in '12345' %}
+                            {% if i|add:"0" <= review.rating %}
+                                <span class="star"><img src="{% static 'img/star_fill.png' %}" alt="Shapes and symbols icons created by lakonicon - Flaticon"></span>
+                            {% else %}
+                                <span class="star"><img src="{% static 'img/star_empty.png' %}" alt="Shapes and symbols icons created by lakonicon - Flaticon"></span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+                <p class="review-content">{{review.review_content}}</p>
+            </div>
+            {% if review.user.email == request.user.email %}
+                <div class="review-options">
+                    <form action="{% url 'editReview' review.id %}" method="post">
+                        {% csrf_token %}
+                        <input class="edit-button" type="submit" value="Editar Reseña">
+                    </form>
+                    <form action="{% url 'deleteReview' review.id %}" method="post">
+                        {% csrf_token %}
+                        <input class="delete-button" type="submit" value="Borrar Reseña">
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% else %}
+    <p class="m-10">Aún no has escrito ninguna reseña</p>
+{% endif %}

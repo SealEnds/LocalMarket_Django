@@ -1,0 +1,67 @@
+{% extends 'layouts/layout.html' %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    
+    <section>
+        <h2>Editar mi Perfil</h2> <!--__________________________________________________________-->
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+        {% endif %}
+        {{registerForm.errors}}
+        <div class="">
+            <form method="post" action="">
+                {% csrf_token %}
+                {% for field in registerForm %}
+                    <label>{{field.label}}</label>
+                    {{field}}
+                {% endfor %}
+                <div class="flex-end">
+                    <input type="submit" value="Actualizar Usuario"/>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    {% comment %} permitir crear tiendas solo a usuarios autorizados {% endcomment %}
+    {% if is_owner %}
+        <hr>
+        <section class="bg-white">
+            <h2><a class="text-decoration" href="{%url 'createtienda' %}">Crear Tienda</a></h2>
+        </section>
+
+        <hr>
+        <section class="perfil-tiendas">
+            <h2 class="bg-white">Mis Tiendas</h2>
+            <div class="articles-prefil-tiendas">
+                {% include "tiendas/forTiendas.html" %}
+            </div>
+        </section>
+    {% endif %}
+    {% comment %} <section>
+        <h2>Mis Tiendas Favoritas</h2> <!--__________________________________________________________-->
+    </section>
+    <section>
+        <h2>Mis Productos Favoritos</h2> <!--__________________________________________________________-->
+    </section> {% endcomment %}
+    <hr>
+    <section class="review-section">
+        <h2>Mis Reseñas</h2> <!--__________________________________________________________-->
+        {% include "productos/forReviews.html" %}
+    </section>
+
+        {% if not is_owner %}
+            <hr>
+            <h2>Crear Perfil Vendedor</h2>
+            {% if change_role_request %}
+                <p class="centered-text">Petición enviada.</p>
+            {% else %}
+                <a class="centered-link" href="{% url 'changeRole' request.user.pk %}">Enviar petición</a>
+            {% endif %}
+        {% endif %}
+{% endblock %}

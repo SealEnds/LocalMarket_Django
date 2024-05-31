@@ -1,0 +1,14 @@
+{% extends 'layouts/layout.html' %}
+{% block title %} {{ review.name }} {% endblock %}
+{% block content %}
+<section>
+    <div class="articles-list">
+        {% if model == 'tienda' %}
+            {% include "tiendas/forTiendas.html" %}
+        {% elif model == 'producto' %}
+            {% include "productos/forProductos.html" %}
+        {% endif %}
+        {% include "mainApp/searchPagination.html" %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layouts/layout.html' %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                {{message}}
+            </div>
+        {% endfor %}
+    {% endif %}
+    {{registerForm.errors}}
+    <form method="post" action="">
+        {% csrf_token %} <!-- seguridad -->
+        {% comment %}
+        {{registerForm}}
+        {% endcomment %}
+        {% for field in registerForm %}
+            <label>{{field.label}}</label>
+            {{field}}
+        {% endfor %}
+        <div class="flex-end">
+            <input type="submit" value="Crear Usuario"/>
+        </div>
+    </form>
+{% endblock %}

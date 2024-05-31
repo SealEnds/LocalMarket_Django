@@ -1,0 +1,45 @@
+{% extends 'layouts/layout.html' %}
+{% load static %}
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <h1>{{title}}</h1>
+    <h2>para <a href="{% url 'editTienda' tienda.id %}">{{tienda.name}}</a></h2>
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                <a class="message-link" href="{% url 'producto' producto.id %}">{{message}}</a>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {{productoForm.errors}}
+    <div class="form-container">
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% for field in productoForm %}
+            <div class="form-group">
+                <label>{{ field.label_tag }}</label>
+                {{ field }}
+                <div class="text-danger">{{ field.errors }}</div>  <!-- Display field-specific errors -->
+            </div>
+            {% endfor %}
+            <div class="form-submit">
+            {% if action == 'create' %}
+                <input type="submit" value="Crear Producto"/>
+            {% else %}
+                <input type="submit" value="Editar Producto"/>
+            {% endif %}
+            </div>
+        </form>
+    </div>
+
+    {% comment %} {% block scripts %} {% endcomment %}
+    
+    {% comment %} {% comment %} <script src="{% static 'js/ckeditor.js' %}"></script>
+    <script  src="{% static 'js/customCKeditor.js' %}"></script>
+    {% comment %} {% load render_bundle from webpack_loader %} {% endcomment %}
+    {% comment %} {% render_bundle 'main' 'js' %} {% endcomment %}
+
+    {% comment %} {% endblock %} {% endcomment %}
+    
+{% endblock %}

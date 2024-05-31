@@ -1,0 +1,13 @@
+<div class="paginator">
+    {% if tiendas.has_previous %}
+    <a href="?page=1&model={{ model }}&query={{ query }}&category={{ category }}">First</a>
+    <a href="?page={{ tiendas.previous_page_number }}&model={{ model }}&query={{ query }}&category={{ category }}">&laquo;Anterior</a> <!-- página anterior -->
+    {% endif %}
+    <span class="actual">
+        {{ tiendas.number }}
+    </span>
+    {% if tiendas.has_next %} <!-- si la pagina es > 1 -->
+        <a href="?page={{ tiendas.next_page_number }}&model={{ model }}&query={{ query }}&category={{ category }}">Next&raquo;</a>
+        <a href="?page={{ tiendas.paginator.num_pages }}&model={{ model }}&query={{ query }}&category={{ category }}">Last</a>
+    {% endif %}
+</div>
