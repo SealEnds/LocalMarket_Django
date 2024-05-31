@@ -46,11 +46,15 @@ Content of product is:
     Contet: Created with CKeditor5
     Reviews
 
+4. Admin: superuser
+
 Static pages can be created from django admin panel
 
-Admin panel names has been customized 
+Admin panel names has been customized
 
-4. Project Structure -
+In order to allow a user be 'owner', you have to add the user to the group owner. Users and Groups use to default Django models.
+
+5. Project Structure -
 3 apps:
 
 mainApp -> Static folder for css and images - Main template: layout.html - Login and register 
