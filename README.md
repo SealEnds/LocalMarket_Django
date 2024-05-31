@@ -3,17 +3,20 @@
 2º DAW (Web Development) Final Project with Django
 
 1. Guest user (no login): 
+
 See shops and productos
 Search products and shops by category
 Register / Login 
 
 2. User (registered): 
+
 Add reviews to productos. Edit and delete reviews.
     (Possible improvement: Don't allow more than one review per user and product and don't allow reviews in your own products.)
 Edit profile info
 Request to admins a change of profile to 'owner' (seller would have been a better name). 
 
 3. Owner User: 
+
 Create Shops in Profile
 View my shops in profile
 Create Products in Shop manually or with csv:
@@ -35,7 +38,7 @@ Content of product is:
 Static pages can be created from django admin panel
 Admin panel names has been customized 
 
-4. Project Structure
+4. Project Structure -
 3 apps:
 
 mainApp -> Static folder for css and images - Main template: layout.html - Login and register 
