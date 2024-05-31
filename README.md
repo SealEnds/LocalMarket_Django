@@ -37,8 +37,11 @@ Admin panel names has been customized
 
 4. Project Structure
 3 apps:
+
 mainApp -> Static folder for css and images - Main template: layout.html - Login and register 
+
 paginas -> Generate static pages via admin panel 
+
 tiendas -> Everythin related to shops and products 
 
 Relevant sources:
