@@ -48,11 +48,11 @@ Content of product is:
 
 4. Admin: superuser
 
+Add a user to the group 'owner' so that it is allowed to create shops and products. Users and Groups use to default Django models.
+
 Static pages can be created from django admin panel
 
 Admin panel names has been customized
-
-In order to allow a user be 'owner', you have to add the user to the group owner. Users and Groups use to default Django models.
 
 5. Project Structure -
 3 apps:
