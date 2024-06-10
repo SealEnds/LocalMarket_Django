@@ -60,10 +60,8 @@
                     </div>
                     {% endfor %}
                     <div class="align-center">
-                        {% if producto.user.email == request.user.email %}
-                            {% comment %} Desactivado para poder probarlo mejor {% endcomment %}
-                            {% comment %} <input type="submit" value="Subir Reseña" class="disabled-button" disabled/> {% endcomment %}
-                            <input type="submit" value="Subir Reseña"/>
+                        {% if producto.user.email == request.user.email or myReview %}
+                            <input type="submit" value="Subir Reseña" class="disabled-button" disabled/>
                         {% else %}
                             <input type="submit" value="Subir Reseña"/>
                         {% endif %}

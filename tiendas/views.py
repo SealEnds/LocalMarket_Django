@@ -150,9 +150,11 @@ def createProducto(request, tienda_id, producto_id=None): # reutilziar para edit
 
 def getProducto(request, producto_id):
     producto = Producto.objects.select_related('tienda').get(id=producto_id) # .get to get one. .filter to get many with condition .all() to get all. # select related tienda for editTienda url
-    reviews = Review.objects.filter(producto_id=producto_id).select_related('user') # devuelve el objeto user relacionado con user_id
+    user_id = request.user.pk
+    reviews = Review.objects.filter(producto_id=producto_id).select_related('user') # devuelve el objeto user relacionado con la review del usuario
+    my_review = Review.objects.filter(producto_id=producto_id, user_id=user_id).select_related('user')
     if request.user.is_authenticated:
-        if request.method == 'POST':
+        if request.method == 'POST' and not my_review:
             reviewForm = ReviewForm(request.POST)
             if reviewForm.is_valid():
                 review = reviewForm.save(commit=False) # no guardar todavía, hay que asignar un usuario y un producto
@@ -169,7 +171,8 @@ def getProducto(request, producto_id):
         'title': 'Detalle de Producto',
         'producto': producto,
         'reviews': reviews,
-        'reviewForm': reviewForm
+        'reviewForm': reviewForm,
+        'myReview': my_review
     })
 
 @login_required(login_url="login")
