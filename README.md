@@ -1,6 +1,8 @@
 # local-market
 
-2º DAW (Web Development) Final Project with Django
+2º DAW (Web Development) Final Project with Django.
+
+- [Final Project Report (PDF)](https://github.com/SealEnds/LocalMarket_Django/edit/main/Final Project Report.pdf)
 
 1. Guest user (no login): 
 
