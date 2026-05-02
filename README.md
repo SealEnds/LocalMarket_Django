@@ -2,7 +2,7 @@
 
 2º DAW (Web Development) Final Project with Django.
 
-- [Final Project Report (PDF)](https://github.com/SealEnds/LocalMarket_Django/edit/main/Final Project Report.pdf)
+- [Final Project Report (PDF)](https://github.com/SealEnds/LocalMarket_Django/edit/main/Final%20Project%20Report.pdf)
 
 1. Guest user (no login): 
 
